@@ -1,15 +1,74 @@
-import React from "react";
-import clsx from "clsx";
+"use client";
 
-type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> & {
-  className?: string;
+import * as React from "react";
+import { Slot } from "@radix-ui/react-slot";
+import { cn } from "@/lib/utils";
+import { Loader2 } from "lucide-react";
+
+export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+  asChild?: boolean;
+  variant?: "default" | "destructive" | "outline" | "ghost" | "link";
+  size?: "default" | "sm" | "lg" | "icon";
+  loading?: boolean;
+  icon?: React.ReactNode;
+  iconPosition?: "left" | "right";
+}
+
+const buttonVariants = {
+  default: "bg-green-700 text-white hover:bg-green-800",
+  destructive: "bg-red-600 text-white hover:bg-red-700",
+  outline: "border border-green-700 text-green-700 hover:bg-green-100",
+  ghost: "text-green-700 hover:bg-green-100",
+  link: "text-green-700 underline-offset-4 hover:underline",
 };
 
-export const Button: React.FC<ButtonProps> = ({ className, children, ...props }) => (
-  <button
-    {...props}
-    className={clsx("rounded px-4 py-2 font-medium", className)}
-  >
-    {children}
-  </button>
+const buttonSizes = {
+  default: "h-10 px-4 py-2 text-base",
+  sm: "h-9 px-3 text-sm",
+  lg: "h-11 px-8 text-lg",
+  icon: "h-10 w-10 p-2",
+};
+
+export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
+  (
+    {
+      className,
+      variant = "default",
+      size = "default",
+      asChild = false,
+      loading = false,
+      icon,
+      iconPosition = "left",
+      children,
+      ...props
+    },
+    ref
+  ) => {
+    const Comp = asChild ? Slot : "button";
+    return (
+      <Comp
+        className={cn(
+          "inline-flex items-center justify-center rounded-2xl font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-green-500 disabled:opacity-50 disabled:pointer-events-none gap-2",
+          buttonVariants[variant],
+          buttonSizes[size],
+          className
+        )}
+        ref={ref}
+        disabled={loading || props.disabled}
+        {...props}
+      >
+        {loading ? (
+          <Loader2 className="animate-spin h-4 w-4" />
+        ) : (
+          <>
+            {icon && iconPosition === "left" && <span className="h-4 w-4">{icon}</span>}
+            {children}
+            {icon && iconPosition === "right" && <span className="h-4 w-4">{icon}</span>}
+          </>
+        )}
+      </Comp>
+    );
+  }
 );
+
+Button.displayName = "Button";
