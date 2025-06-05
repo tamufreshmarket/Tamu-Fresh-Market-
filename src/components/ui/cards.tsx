@@ -1,11 +1,19 @@
- export const Button = ({ children, className }) => (
-  <button className={`px-4 py-2 rounded ${className}`}>{children}</button>
- );
+import React from "react";
+import clsx from "clsx";
 
- export const Card = ({ children, className }) => (
-  <div className={`bg-white rounded-lg border ${className}`}>{children}</div>
- );
- 
- export const CardContent = ({ children, className }) => (
-  <div className={className}>{children}</div>
- );
+type CardProps = {
+  children: React.ReactNode;
+  className?: string;
+};
+
+export const Card: React.FC<CardProps> = ({ children, className }) => (
+  <div className={clsx("bg-white rounded-lg border", className)}>
+    {children}
+  </div>
+);
+
+export const CardContent: React.FC<CardProps> = ({ children, className }) => (
+  <div className={clsx(className)}>
+    {children}
+  </div>
+);
