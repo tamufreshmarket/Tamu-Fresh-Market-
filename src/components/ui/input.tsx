@@ -12,5 +12,13 @@ export interface BadgeProps extends React.HTMLAttributes<HTMLDivElement> { varia
 
 const badgeVariants = { default: "bg-green-100 text-green-800", secondary: "bg-gray-100 text-gray-800", destructive: "bg-red-100 text-red-800", }
 
-const Badge = React
+const Badge = React.forwardRef<HTMLDivElement, BadgeProps>(({ className, variant = "default", ...props }, ref) => { return ( <div ref={ref} className={cn( "inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-medium", badgeVariants[variant], className )} {...props} /> ) }) Badge.displayName = "Badge"
+
+export { Badge }
+
+// src/components/ui/modal.tsx import * as React from "react" import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogFooter } from "@/components/ui/dialog" import { Button } from "@/components/ui/button"
+
+interface ModalProps { open: boolean onOpenChange: (open: boolean) => void title: string description?: string children: React.ReactNode footer?: React.ReactNode }
+
+export function Modal({ open, onOpenChange, title, description, children, footer }: ModalProps) { return ( <Dialog open={open} onOpenChange={onOpenChange}> <DialogContent> <DialogHeader> <DialogTitle>{title}</DialogTitle> {description && <DialogDescription>{description}</DialogDescription>} </DialogHeader> <div>{children}</div> {footer && <DialogFooter>{footer}</DialogFooter>} </DialogContent> </Dialog> ) }
 
