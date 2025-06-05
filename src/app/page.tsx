@@ -88,3 +88,6 @@
 }
 
 // Trigger Vercel redeploy
+/src
+  /app
+    page.tsx ✅ (main entry point for a Next.js app)
