@@ -36,4 +36,3 @@ export default function TamuFreshMarket() {
         <Card>
           <CardContent className="p-6 text-center">
             <Leaf className="mx-auto text-green-600 mb-4
-}
