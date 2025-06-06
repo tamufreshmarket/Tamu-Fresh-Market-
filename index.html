@@ -1,69 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tamu Fresh Market</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tamu Fresh Market</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <header>
-        <h1>Tamu Fresh Market</h1>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#products">Products</a></li>
-                <li><a href="#how-it-works">How It Works</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+<body class="bg-white text-gray-800 font-sans">
+  <!-- Header -->
+  <header class="bg-green-600 text-white py-4 shadow">
+    <div class="container mx-auto px-4 flex justify-between items-center">
+      <h1 class="text-2xl font-bold">Tamu Fresh Market</h1>
+      <nav>
+        <ul class="flex space-x-4">
+          <li><a href="#home" class="hover:underline">Home</a></li>
+          <li><a href="#products" class="hover:underline">Products</a></li>
+          <li><a href="#how-it-works" class="hover:underline">How It Works</a></li>
+          <li><a href="#contact" class="hover:underline">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-    <main>
-        <section id="home" class="hero">
-            <h2>Fresh Fruits & Vegetables, Delivered to Your Doorstep!</h2>
-            <p>Your reliable source for the freshest fruits and vegetables, delivered straight from the farm to your home in **Harare**.</p>
-            <a href="https://wa.me/c/263712560594" class="order-button" target="_blank">Order Now via WhatsApp</a>
-        </section>
+  <main class="mt-8">
+    <!-- Hero Section -->
+    <section id="home" class="text-center px-6 py-12 bg-green-50">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4">Fresh Fruits & Vegetables, Delivered to Your Doorstep!</h2>
+      <p class="text-lg mb-6 max-w-xl mx-auto">Your reliable source for the freshest produce, delivered straight from the farm to your home in <strong>Harare</strong>.</p>
+      <a href="https://wa.me/c/263712560594" target="_blank" class="inline-block bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-6 rounded shadow">
+        Order Now via WhatsApp
+      </a>
+    </section>
 
-        <section id="products" class="products">
-            <h2>Our Fresh Produce</h2>
-            <div class="product-grid">
-                <div class="product-item">
-                    <h3>Seasonal Fruits</h3>
-                    <p>Apples, Oranges, Bananas, Grapes, and more! Hand-picked for the best quality.</p>
-                    <img src="https://via.placeholder.com/150/FF5733/FFFFFF?text=Fruits" alt="Seasonal Fruits">
-                </div>
-                <div class="product-item">
-                    <h3>Fresh Vegetables</h3>
-                    <p>Tomatoes, Spinach, Carrots, Cabbage, Potatoes, and various variety packs. Perfect for healthy meals.</p>
-                    <img src="https://via.placeholder.com/150/33FF57/FFFFFF?text=Veggies" alt="Fresh Vegetables">
-                </div>
-                </div>
-        </section>
+    <!-- Products Section -->
+    <section id="products" class="py-12 bg-white px-6">
+      <h2 class="text-2xl font-bold text-center mb-8">Our Fresh Produce</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <div class="border rounded-lg p-4 shadow hover:shadow-md transition">
+          <img src="https://via.placeholder.com/300/FF5733/FFFFFF?text=Fruits" alt="Seasonal Fruits" class="rounded mb-4 w-full h-auto"/>
+          <h3 class="text-xl font-semibold mb-2">Seasonal Fruits</h3>
+          <p>Apples, Oranges, Bananas, Grapes, and more! Hand-picked for the best quality.</p>
+        </div>
+        <div class="border rounded-lg p-4 shadow hover:shadow-md transition">
+          <img src="https://via.placeholder.com/300/33FF57/FFFFFF?text=Veggies" alt="Fresh Vegetables" class="rounded mb-4 w-full h-auto"/>
+          <h3 class="text-xl font-semibold mb-2">Fresh Vegetables</h3>
+          <p>Tomatoes, Spinach, Carrots, Cabbage, Potatoes, and more — perfect for healthy meals.</p>
+        </div>
+      </div>
+    </section>
 
-        <section id="how-it-works" class="how-it-works">
-            <h2>How It Works</h2>
-            <ol>
-                <li>Browse our selection of fresh produce on this page.</li>
-                <li>Place your order directly via our WhatsApp Catalog.</li>
-                <li>We hand-pick the best quality items fresh for you.</li>
-                <li>Enjoy convenient doorstep delivery! Delivery service is **$0.35 per km from Harare CBD.**</li>
-            </ol>
-        </section>
+    <!-- How It Works -->
+    <section id="how-it-works" class="py-12 bg-green-50 px-6">
+      <h2 class="text-2xl font-bold text-center mb-8">How It Works</h2>
+      <ol class="list-decimal list-inside max-w-xl mx-auto space-y-3 text-lg">
+        <li>Browse our selection of fresh produce on this page.</li>
+        <li>Place your order directly via our WhatsApp Catalog.</li>
+        <li>We hand-pick the best quality items fresh for you.</li>
+        <li>Enjoy convenient doorstep delivery! Delivery is <strong>$0.35 per km</strong> from Harare CBD.</li>
+      </ol>
+    </section>
 
-        <section id="contact" class="contact">
-            <h2>Contact Us</h2>
-            <p>Ready to order or have questions? Reach out to us directly on WhatsApp!</p>
-            <p>Order & Inquiries: <a href="https://wa.me/c/263712560594" target="_blank">**Click Here to Order via WhatsApp Catalog**</a></p>
-            <p>Our service operates within Harare, Zimbabwe, with deliveries charged **$0.35 per km from Harare CBD.**</p>
-            </section>
-    </main>
+    <!-- Contact -->
+    <section id="contact" class="py-12 bg-white px-6">
+      <h2 class="text-2xl font-bold text-center mb-6">Contact Us</h2>
+      <p class="text-center max-w-xl mx-auto mb-4 text-lg">Have questions or ready to order? Reach out directly on WhatsApp!</p>
+      <p class="text-center text-green-700 font-semibold">
+        <a href="https://wa.me/c/263712560594" target="_blank" class="underline">Click here to order via WhatsApp Catalog</a>
+      </p>
+      <p class="text-center text-sm mt-4">Delivery within Harare, Zimbabwe. Charged <strong>$0.35 per km</strong> from CBD.</p>
+    </section>
+  </main>
 
-    <footer>
-        <p>&copy; 2025 Tamu Fresh Market. All rights reserved.</p>
-    </footer>
-
-    <script src="script.js"></script>
+  <!-- Footer -->
+  <footer class="bg-green-600 text-white text-center py-4 mt-8">
+    <p>&copy; 2025 Tamu Fresh Market. All rights reserved.</p>
+  </footer>
 </body>
-</html>
+    </html>
