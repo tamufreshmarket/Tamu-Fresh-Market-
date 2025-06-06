@@ -24,18 +24,10 @@
           <img src="/tamu-logo.jpg" alt="Tamu Logo" class="h-full logo-cover mx-auto" />
         </div>
         <nav class="flex flex-wrap justify-center gap-6 text-sm font-medium text-green-700">
-          <a href="#home" class="relative pb-1 hover:text-green-900 transition-colors duration-200 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-green-700 hover:after:w-full after:transition-all after:duration-300">
-            Home
-          </a>
-          <a href="#products" class="relative pb-1 hover:text-green-900 transition-colors duration-200 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-green-700 hover:after:w-full after:transition-all after:duration-300">
-            Products
-          </a>
-          <a href="#how-it-works" class="relative pb-1 hover:text-green-900 transition-colors duration-200 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-green-700 hover:after:w-full after:transition-all after:duration-300">
-            How It Works
-          </a>
-          <a href="#contact" class="relative pb-1 hover:text-green-900 transition-colors duration-200 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-green-700 hover:after:w-full after:transition-all after:duration-300">
-            Contact
-          </a>
+          <a href="#home" class="relative pb-1 hover:text-green-900 transition-colors duration-200 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-green-700 hover:after:w-full after:transition-all after:duration-300">Home</a>
+          <a href="#products" class="relative pb-1 hover:text-green-900 transition-colors duration-200 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-green-700 hover:after:w-full after:transition-all after:duration-300">Products</a>
+          <a href="#how-it-works" class="relative pb-1 hover:text-green-900 transition-colors duration-200 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-green-700 hover:after:w-full after:transition-all after:duration-300">How It Works</a>
+          <a href="#contact" class="relative pb-1 hover:text-green-900 transition-colors duration-200 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-green-700 hover:after:w-full after:transition-all after:duration-300">Contact</a>
         </nav>
       </div>
     </header>
@@ -55,37 +47,82 @@
     <section id="products" class="py-16 bg-white px-6">
       <h2 class="text-3xl font-bold text-center mb-12">Our Fresh Produce</h2>
 
-      <!-- Product Card: Precut Green Beans -->
-      <div class="max-w-md mx-auto bg-white shadow-lg rounded-lg overflow-hidden mb-8">
-        <img src="/precuts.jpg" alt="Precut Green Beans" class="w-full h-60 object-cover">
-        <div class="p-4">
-          <h3 class="text-xl font-semibold text-green-700">Precut Green Beans</h3>
-          <p class="text-gray-600">Size: 400g</p>
-          <p class="text-gray-800 font-semibold">US$1.25</p>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 max-w-6xl mx-auto">
+
+        <!-- Product Card: Precut Green Beans -->
+        <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+          <img src="/precuts.jpg" alt="Precut Green Beans" class="w-full h-60 object-cover">
+          <div class="p-4">
+            <h3 class="text-xl font-semibold text-green-700">Precut Green Beans</h3>
+            <p class="text-gray-600">Size: 400g</p>
+            <p class="text-gray-800 font-semibold">US$1.25</p>
+          </div>
         </div>
+
+        <!-- Product Card: Button Mushroom -->
+        <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+          <img src="/button-mushroom.jpg" alt="Button Mushroom per Punnet" class="w-full h-60 object-cover">
+          <div class="p-4">
+            <h3 class="text-xl font-semibold text-green-700">Button Mushroom per Punnet</h3>
+            <p class="text-gray-600">Quantity: 1 Punnet</p>
+            <p class="text-gray-800 font-semibold">US$3.00</p>
+          </div>
+        </div>
+
+        <!-- Product Card: Baby Marrow -->
+        <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+          <img src="/images/baby-marrow.jpg" alt="Baby Marrow" class="w-full h-60 object-cover">
+          <div class="p-4">
+            <h3 class="text-xl font-semibold text-green-700">Baby Marrow</h3>
+            <p class="text-gray-600">Size: 400g</p>
+            <p class="text-gray-800 font-semibold">US$1.00</p>
+          </div>
+        </div>
+
+        <!-- Product Card: Apples -->
+        <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+          <img src="/images/apples.jpg" alt="Apples" class="w-full h-60 object-cover">
+          <div class="p-4">
+            <h3 class="text-xl font-semibold text-green-700">Apples</h3>
+            <p class="text-gray-600">Size: 500g</p>
+            <p class="text-gray-800 font-semibold">US$1.25</p>
+          </div>
+        </div>
+
+        <!-- Product Card: Avocado -->
+        <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+          <img src="/images/avocado.jpg" alt="Avocado" class="w-full h-60 object-cover">
+          <div class="p-4">
+            <h3 class="text-xl font-semibold text-green-700">Avocado</h3>
+            <p class="text-gray-600">Quantity: Per Unit</p>
+            <p class="text-gray-800 font-semibold">US$0.75</p>
+          </div>
+        </div>
+
+        <!-- Product Card: Precut Potato Chips -->
+        <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+          <img src="/images/precut-potato-chips.jpg" alt="Precut Potato Chips" class="w-full h-60 object-cover">
+          <div class="p-4">
+            <h3 class="text-xl font-semibold text-green-700">Precut Potato Chips</h3>
+            <p class="text-gray-600">Size: 500g Pack</p>
+            <p class="text-gray-800 font-semibold">US$1.00</p>
+          </div>
+        </div>
+
       </div>
 
-      <!-- Product Card: Button Mushroom -->
-      <div class="max-w-md mx-auto bg-white shadow-lg rounded-lg overflow-hidden mb-8">
-        <img src="/button-mushroom.jpg" alt="Button Mushroom per Punnet" class="w-full h-60 object-cover">
-        <div class="p-4">
-          <h3 class="text-xl font-semibold text-green-700">Button Mushroom per Punnet</h3>
-          <p class="text-gray-600">Quantity: 1 Punnet</p>
-          <p class="text-gray-800 font-semibold">US$3.00</p>
-        </div>
-      </div>
+      <div class="mt-12 max-w-2xl mx-auto text-center">
+        <h3 class="text-xl font-semibold mb-2">Seasonal Fruits</h3>
+        <p class="text-gray-600">Apples, Oranges, Bananas, Grapes, and more — picked at peak freshness.</p>
 
-      <h3 class="text-xl font-semibold mb-2">Seasonal Fruits</h3>
-      <p class="text-gray-600">Apples, Oranges, Bananas, Grapes, and more — picked at peak freshness.</p>
-      
-      <h3 class="text-xl font-semibold mb-2 mt-8">Fresh Vegetables</h3>
-      <p class="text-gray-600">Tomatoes, Spinach, Carrots, Cabbage, Potatoes, and more — delivered crisp and clean.</p>
+        <h3 class="text-xl font-semibold mb-2 mt-8">Fresh Vegetables</h3>
+        <p class="text-gray-600">Tomatoes, Spinach, Carrots, Cabbage, Potatoes, and more — delivered crisp and clean.</p>
+      </div>
     </section>
 
     <!-- How It Works -->
     <section id="how-it-works" class="py-16 bg-green-50 px-6">
       <h2 class="text-3xl font-bold text-center mb-10">How It Works</h2>
-      
       <div class="space-y-6 max-w-2xl mx-auto">
         <div class="flex items-start gap-4">
           <span class="text-green-700 font-bold">1.</span>
@@ -119,4 +156,4 @@
     </footer>
 
   </body>
-  </html>
+            </html>
