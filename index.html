@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tamu Fresh Market</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Tamu Fresh Market</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#how-it-works">How It Works</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <h2>Your Daily Dose of Freshness, Delivered!</h2>
+            <p>Get the freshest fruits and vegetables delivered right to your doorstep in Harare.</p>
+            <button onclick="alert('Order now functionality to be added!')">Order Now</button>
+        </section>
+
+        <section id="products" class="products">
+            <h2>Our Fresh Produce</h2>
+            <div class="product-grid">
+                <div class="product-item">
+                    <h3>Seasonal Fruits</h3>
+                    <p>Apples, Oranges, Bananas, and more!</p>
+                    <img src="https://via.placeholder.com/150/FF5733/FFFFFF?text=Fruits" alt="Seasonal Fruits">
+                </div>
+                <div class="product-item">
+                    <h3>Fresh Vegetables</h3>
+                    <p>Tomatoes, Spinach, Carrots, and variety packs.</p>
+                    <img src="https://via.placeholder.com/150/33FF57/FFFFFF?text=Veggies" alt="Fresh Vegetables">
+                </div>
+                </div>
+        </section>
+
+        <section id="how-it-works" class="how-it-works">
+            <h2>How It Works</h2>
+            <ol>
+                <li>Browse our selection of fresh produce.</li>
+                <li>Place your order online or via phone.</li>
+                <li>We hand-pick the best quality items.</li>
+                <li>Enjoy convenient doorstep delivery!</li>
+            </ol>
+        </section>
+
+        <section id="contact" class="contact">
+            <h2>Contact Us</h2>
+            <p>Ready to order or have questions? Reach out to us!</p>
+            <p>Email: <a href="mailto:info@tamufreshmarket.com">info@tamufreshmarket.com</a></p>
+            <p>Phone: +263 77 XXXXXXX</p>
+            <form>
+                <label for="name">Name:</label><br>
+                <input type="text" id="name" name="name"><br>
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email"><br>
+                <label for="message">Message:</label><br>
+                <textarea id="message" name="message" rows="5"></textarea><br>
+                <input type="submit" value="Send Message">
+            </form>
+            <p>Our office is located in Harare, Zimbabwe.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Tamu Fresh Market. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
