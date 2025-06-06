@@ -13,29 +13,77 @@
         color: #111827;
       }
 
-      .header
-  <body class="bg-white text-gray-800">
-    <!-- Header -->
-    <header class="bg-green-700 text-white shadow-sm sticky top-0 z-50">
-      <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-        <div class="flex items-center gap-3">
-          <img src="assets/tamu-logo.png" alt="Tamu Fresh Market Logo" class="h-10 w-auto" />
-          <h1 class="text-2xl font-bold">Tamu Fresh Market</h1>
-        </div>
-        <nav class="hidden md:flex space-x-6 text-sm font-medium">
-          <a href="#home" class="hover:underline">Home</a>
-          <a href="#products" class="hover:underline">Products</a>
-          <a href="#how-it-works" class="hover:underline">How It Works</a>
-          <a href="#contact" class="hover:underline">Contact</a>
-        </nav>
-      </div>
+      .header {
+        display: flex;
+        align-items: center;
+        background-color: #047857;
+        padding: 10px 16px;
+      }
+
+      .logo {
+        height: 70px;
+        width: auto;
+        object-fit: contain;
+        background-color: #ffffff;
+        padding: 4px;
+        border-radius: 6px;
+      }
+
+      .site-title {
+        color: white;
+        font-size: 1.8rem;
+        margin-left: 16px;
+        font-weight: 700;
+      }
+
+      .hero {
+        padding: 40px 16px;
+        text-align: center;
+      }
+
+      .hero h1 {
+        font-size: 2rem;
+        font-weight: 700;
+        margin-bottom: 16px;
+      }
+
+      .hero p {
+        font-size: 1rem;
+        color: #374151;
+        margin-bottom: 24px;
+      }
+
+      .cta-button {
+        display: inline-block;
+        padding: 12px 24px;
+        background-color: #047857;
+        color: white;
+        text-decoration: none;
+        border-radius: 8px;
+        font-weight: 600;
+        transition: background-color 0.2s ease-in-out;
+      }
+
+      .cta-button:hover {
+        background-color: #065f46;
+      }
+
+      .section-title {
+        font-size: 1.5rem;
+        font-weight: 700;
+        text-align: center;
+        margin-top: 40px;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <img src="logo.png" alt="Tamu Logo" class="logo" />
+      <div class="site-title">Tamu Fresh Market</div>
     </header>
 
-    <!-- The rest of your site remains unchanged -->
-    <!-- Hero Section -->
-    <section id="home" class="bg-green-50 text-center py-20 px-6">
-      <div class="max-w-3xl mx-auto">
-        <h2 class="text-4xl md:text-5xl font-extrabold mb-6 leading-tight">Farm-Fresh Goodness, Delivered to Your Doorstep</h2>
+    <section class="hero">
+      <h1>Farm-Fresh Goodness, Delivered to Your Doorstep</h2>
         <p class="text-lg mb-8 text-gray-700">Enjoy fresh, locally-sourced fruits and vegetables from Tamu — your farm-to-table partner in <strong>Harare</strong>.</p>
         <a href="https://wa.me/c/263712560594" target="_blank" class="bg-green-700 hover:bg-green-800 text-white px-8 py-3 rounded-lg font-semibold shadow transition duration-300">
           🛒 Order via WhatsApp
