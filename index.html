@@ -43,7 +43,7 @@
         font-weight: bold; /* font-bold equivalent */
         color: #16a34a; /* text-green-600 equivalent */
       }
-      .product-quantity, .product-description {
+      .product-quantity, .product-description, .product-unit {
         font-size: 0.875rem; /* text-sm equivalent */
         color: #6b7280; /* text-gray-500 equivalent */
       }
@@ -175,7 +175,6 @@
           <button class="add-to-cart" data-name="Green Beans" data-price="1.00">Add to Cart</button>
         </div>
 
-
         <div class="product-card">
           <h3 class="product-title">Red Cabbage</h3>
           <p class="product-quantity">Quantity: per Head</p>
@@ -201,7 +200,6 @@
         </div>
 
         <div class="product-card">
-          <img src="vegetables.jpg" alt="Vegetables per Bundle" class="product-image" />
           <h3 class="product-title">Vegetables per Bundle</h3>
           <p class="product-price">US$0.50</p>
           <p class="product-description">Cove | Rape</p>
@@ -209,21 +207,18 @@
         </div>
 
         <div class="product-card">
-          <img src="beetroot.jpg" alt="Beetroot per Punnet" class="product-image" />
           <h3 class="product-title">Beetroot per Punnet</h3>
           <p class="product-price">US$1.50</p>
           <button class="add-to-cart" data-name="Beetroot per Punnet" data-price="1.50">Add to Cart</button>
         </div>
 
         <div class="product-card">
-          <img src="cucumber.jpg" alt="Cucumber per kg" class="product-image" />
           <h3 class="product-title">Cucumber per kg</h3>
           <p class="product-price">US$1.00</p>
           <button class="add-to-cart" data-name="Cucumber per kg" data-price="1.00">Add to Cart</button>
         </div>
 
         <div class="product-card">
-          <img src="path/to/english-cucumber.jpg" alt="English Cucumber" class="product-image">
           <h3 class="product-title">English Cucumber</h3>
           <p class="product-quantity">Per unit</p>
           <p class="product-price">$1.25</p>
@@ -231,7 +226,6 @@
         </div>
 
         <div class="product-card">
-          <img src="path/to/peas.jpg" alt="Peas" class="product-image">
           <h3 class="product-title">Peas</h3>
           <p class="product-quantity">Per 500 grams</p>
           <p class="product-price">$2.00</p>
@@ -239,7 +233,6 @@
         </div>
 
         <div class="product-card">
-          <img src="path/to/parsley.jpg" alt="Parsley" class="product-image">
           <h3 class="product-title">Parsley</h3>
           <p class="product-quantity">Per bundle</p>
           <p class="product-price">$1.00</p>
@@ -247,7 +240,6 @@
         </div>
 
         <div class="product-card">
-          <img src="garlic.jpg" alt="Garlic" class="product-image" />
           <h3 class="product-title">Garlic</h3>
           <p class="product-quantity">per 100 grams</p>
           <p class="product-price">$0.80</p>
@@ -255,7 +247,6 @@
         </div>
 
         <div class="product-card">
-          <img src="green-pepper.jpg" alt="Green Pepper" class="product-image" />
           <h3 class="product-title">Green Pepper</h3>
           <p class="product-quantity">per 500 grams</p>
           <p class="product-price">$1.00</p>
@@ -263,7 +254,6 @@
         </div>
 
         <div class="product-card">
-          <img src="sweet-potato.jpg" alt="Sweet Potato" class="product-image" />
           <h3 class="product-title">Sweet Potato</h3>
           <p class="product-quantity">per kg</p>
           <p class="product-price">$0.80</p>
@@ -271,7 +261,6 @@
         </div>
 
         <div class="product-card">
-          <img src="images/red-onion.jpg" alt="Red Onion" class="product-image">
           <h3 class="product-title">Red Onion per 500 grams</h3>
           <p class="product-price">$1.50</p>
           <input type="number" min="1" value="1" class="quantity-input">
@@ -279,7 +268,6 @@
         </div>
 
         <div class="product-card">
-          <img src="images/strawberries.jpg" alt="Strawberries" class="product-image">
           <h3 class="product-title">Strawberries per Punnet</h3>
           <p class="product-price">$2.50</p>
           <input type="number" min="1" value="1" class="quantity-input">
@@ -287,7 +275,6 @@
         </div>
 
         <div class="product-card">
-          <img src="images/blueberries.jpg" alt="Blueberries" class="product-image">
           <h3 class="product-title">Blueberries per Punnet</h3>
           <p class="product-price">$2.50</p>
           <input type="number" min="1" value="1" class="quantity-input">
@@ -295,7 +282,6 @@
         </div>
 
         <div class="product-card">
-          <img src="images/nartjies.jpg" alt="Nartjies" class="product-image" />
           <h3 class="product-title">Nartjies</h3>
           <p class="product-quantity">Quantity: per kg</p>
           <p class="product-price">$2.50</p>
@@ -303,7 +289,6 @@
         </div>
 
         <div class="product-card">
-          <img src="images/pears.jpg" alt="Pears" class="product-image" />
           <h3 class="product-title">Pears</h3>
           <p class="product-quantity">Quantity: per punnet</p>
           <p class="product-price">$1.50</p>
@@ -311,7 +296,6 @@
         </div>
 
         <div class="product-card">
-          <img src="images/plums.jpg" alt="Plums" class="product-image" />
           <h3 class="product-title">Plums</h3>
           <p class="product-quantity">Quantity: per punnet</p>
           <p class="product-price">$2.00</p>
@@ -319,7 +303,6 @@
         </div>
 
         <div class="product-card">
-          <img src="images/watermelon.jpg" alt="Water Melon" class="product-image">
           <h3 class="product-title">Water Melon per Unit</h3>
           <p class="product-quantity">Quantity: 1 Unit</p>
           <p class="product-price">$4.00</p>
@@ -327,7 +310,6 @@
         </div>
 
         <div class="product-card">
-          <img src="images/lettuce.jpg" alt="Lettuce Leaves" class="product-image">
           <h3 class="product-title">Lettuce leaves 250grams Pack</h3>
           <p class="product-quantity">Quantity: 250g</p>
           <p class="product-price">$1.00</p>
@@ -335,7 +317,6 @@
         </div>
 
         <div class="product-card">
-          <img src="images/okra.jpg" alt="Precut Okra" class="product-image">
           <h3 class="product-title">Precut Okra 400grams Pack</h3>
           <p class="product-quantity">Quantity: 400g</p>
           <p class="product-price">$1.50</p>
@@ -343,7 +324,6 @@
         </div>
 
         <div class="product-card">
-          <img src="path-to-image/precut-red-onion.jpg" alt="Precut Red Onion 400g" class="product-image" />
           <h3 class="product-title">Precut Red Onion</h3>
           <p class="product-quantity">400 grams</p>
           <p class="product-price">$1.50</p>
@@ -351,7 +331,6 @@
         </div>
 
         <div class="product-card">
-          <img src="path-to-image/diced-butternut-squash.jpg" alt="Diced Butternut Squash 500g" class="product-image" />
           <h3 class="product-title">Diced Butternut Squash</h3>
           <p class="product-quantity">500 grams</p>
           <p class="product-price">$0.75</p>
@@ -359,7 +338,6 @@
         </div>
 
         <div class="product-card">
-          <img src="path-to-image/peeled-sweet-potato.jpg" alt="Peeled Sweet Potato 500g" class="product-image" />
           <h3 class="product-title">Peeled Sweet Potato</h3>
           <p class="product-quantity">500 grams</p>
           <p class="product-price">$1.00</p>
@@ -367,7 +345,6 @@
         </div>
 
         <div class="product-card">
-          <img src="butternut.jpg" alt="Peeled Butternut" class="product-image">
           <h3 class="product-title">Peeled Butternut 500grams Pack</h3>
           <p class="product-price">US$0.75</p>
           <input type="number" value="1" min="1" class="quantity-input">
@@ -375,7 +352,6 @@
         </div>
 
         <div class="product-card">
-          <img src="green-pepper.jpg" alt="Precut Green Pepper" class="product-image">
           <h3 class="product-title">Precut Green Pepper 500grams Pack</h3>
           <p class="product-price">US$1.25</p>
           <input type="number" value="1" min="1" class="quantity-input">
@@ -383,7 +359,6 @@
         </div>
 
         <div class="product-card">
-          <img src="white-onion.jpg" alt="Precut White Onion" class="product-image">
           <h3 class="product-title">Precut White Onion 400grams Pack</h3>
           <p class="product-price">US$1.00</p>
           <input type="number" value="1" min="1" class="quantity-input">
@@ -391,7 +366,6 @@
         </div>
 
         <div class="product-card">
-          <img src="/images/peeled-garlic.jpg" alt="Peeled garlic" class="product-image">
           <h3 class="product-title">Peeled garlic</h3>
           <p class="product-quantity">100 grams Pack</p>
           <p class="product-price">$1.50</p>
@@ -399,7 +373,6 @@
         </div>
 
         <div class="product-card">
-          <img src="/images/shredded-cabbage.jpg" alt="Shredded White Cabbage" class="product-image">
           <h3 class="product-title">Shredded White Cabbage</h3>
           <p class="product-quantity">500 grams Pack</p>
           <p class="product-price">$0.80</p>
@@ -407,11 +380,238 @@
         </div>
 
         <div class="product-card">
-          <img src="/images/shredded-carrots.jpg" alt="Shredded Carrots" class="product-image">
           <h3 class="product-title">Shredded Carrots</h3>
           <p class="product-quantity">500 grams Pack</p>
           <p class="product-price">$1.25</p>
           <button class="add-to-cart" data-name="Shredded Carrots" data-price="1.25">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+          <h3 class="product-title">Precut Vegetable 400grams Pack</h3>
+          <p class="product-quantity">Quantity: 400g</p>
+          <p class="product-price">$0.75</p>
+          <button class="add-to-cart" data-name="Precut Vegetable 400grams Pack" data-price="0.75">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+          <h3 class="product-title">Precut Potato Wedge 500gram Pack</h3>
+          <p class="product-quantity">Quantity: 500g</p>
+          <p class="product-price">$1.00</p>
+          <button class="add-to-cart" data-name="Precut Potato Wedge 500gram Pack" data-price="1.00">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+          <h3 class="product-title">Shredded Red Cabbage 500grams</h3>
+          <p class="product-quantity">Quantity: 500g</p>
+          <p class="product-price">$1.50</p>
+          <button class="add-to-cart" data-name="Shredded Red Cabbage 500grams" data-price="1.50">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+          <h3 class="product-title">Precut Celery Pack</h3>
+          <p class="product-quantity">400 grams</p>
+          <p class="product-price">$2.75</p>
+          <button class="add-to-cart" data-name="Precut Celery Pack" data-price="2.75">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+          <h3 class="product-title">Mixed Vegetables Pack</h3>
+          <p class="product-quantity">500 grams</p>
+          <p class="product-price">$1.50</p>
+          <button class="add-to-cart" data-name="Mixed Vegetables Pack" data-price="1.50">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+          <h3 class="product-title">Precut Cauliflower Pack</h3>
+          <p class="product-quantity">500 grams</p>
+          <p class="product-price">$1.75</p>
+          <button class="add-to-cart" data-name="Precut Cauliflower Pack" data-price="1.75">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+          <h3 class="product-title">Precut Red Pepper 400grams Pack</h3>
+          <p class="product-price">$1.75</p>
+          <button class="add-to-cart" data-name="Precut Red Pepper 400grams Pack" data-price="1.75">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+          <h3 class="product-title">Precut Yellow Pepper 400grams Pack</h3>
+          <p class="product-price">$1.75</p>
+          <button class="add-to-cart" data-name="Precut Yellow Pepper 400grams Pack" data-price="1.75">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+          <h3 class="product-title">Precut Broccoli 500gram pack</h3>
+          <p class="product-price">$1.75</p>
+          <button class="add-to-cart" data-name="Precut Broccoli 500gram pack" data-price="1.75">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+          <h3 class="product-title">Coriander Bunch</h3>
+          <p class="product-price">US$1.00</p>
+          <p class="product-quantity">Quantity: 1 bunch</p>
+          <button class="add-to-cart" data-name="Coriander Bunch" data-price="1.00">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+          <h3 class="product-title">Green Maize (per unit)</h3>
+          <p class="product-price">US$0.40</p>
+          <p class="product-quantity">Quantity: 1 unit</p>
+          <button class="add-to-cart" data-name="Green Maize" data-price="0.40">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+          <h3 class="product-title">Mopane Worms (Madora)</h3>
+          <p class="product-price">US$2.50</p>
+          <p class="product-quantity">Quantity: 250 grams</p>
+          <button class="add-to-cart" data-name="Mopane Worms (Madora)" data-price="2.50">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+          <h3 class="product-title">Baobab Fruit</h3>
+          <p class="product-quantity">250 grams</p>
+          <p class="product-price">$1.00</p>
+          <button class="add-to-cart" data-name="Baobab Fruit" data-price="1.00">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+          <h3 class="product-title">Groundnuts</h3>
+          <p class="product-quantity">500 grams</p>
+          <p class="product-price">$2.00</p>
+          <button class="add-to-cart" data-name="Groundnuts" data-price="2.00">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+          <h3 class="product-title">Chilli</h3>
+          <p class="product-quantity">250 grams</p>
+          <p class="product-price">$2.00</p>
+          <button class="add-to-cart" data-name="Chilli" data-price="2.00">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+          <h3 class="product-title">Yellow Pepper</h3>
+          <p class="product-price">US$1.75 per 500grams</p>
+          <button class="add-to-cart" data-name="Yellow Pepper" data-price="1.75">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+          <h3 class="product-title">Red Pepper</h3>
+          <p class="product-price">US$1.75 per 500grams</p>
+          <button class="add-to-cart" data-name="Red Pepper" data-price="1.75">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+          <h3 class="product-title">Pumpkin</h3>
+          <p class="product-price">US$5.00 per unit</p>
+          <button class="add-to-cart" data-name="Pumpkin" data-price="5.00">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+            <h3 class="product-title">Lemons</h3>
+            <p class="product-quantity">500 grams</p>
+            <p class="product-price">$1.00</p>
+            <button class="add-to-cart" data-name="Lemons" data-price="1.00">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+            <h3 class="product-title">Potato Large</h3>
+            <p class="product-quantity">10kg</p>
+            <p class="product-price">$11.00</p>
+            <button class="add-to-cart" data-name="Potato Large 10kg" data-price="11.00">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+            <h3 class="product-title">Potato Large</h3>
+            <p class="product-quantity">15kg</p>
+            <p class="product-price">$13.00</p>
+            <button class="add-to-cart" data-name="Potato Large 15kg" data-price="13.00">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+          <h3 class="product-title">Potato Medium</h3>
+          <p class="product-quantity">15kg</p>
+          <p class="product-price">$11.00</p>
+          <button class="add-to-cart" data-name="Potato Medium 15kg" data-price="11.00">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+          <h3 class="product-title">Potato Large</h3>
+          <p class="product-quantity">5kg</p>
+          <p class="product-price">$6.00</p>
+          <button class="add-to-cart" data-name="Potato Large 5kg" data-price="6.00">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+          <h3 class="product-title">Potato Medium</h3>
+          <p class="product-quantity">5kg</p>
+          <p class="product-price">$5.00</p>
+          <button class="add-to-cart" data-name="Potato Medium 5kg" data-price="5.00">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+          <h3 class="product-title">Grapes per Punnet</h3>
+          <p class="product-price">$2.50</p>
+          <input type="number" min="1" value="1" class="quantity-input">
+          <button class="add-to-cart" data-name="Grapes per Punnet" data-price="2.50">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+          <h3 class="product-title">Paw paw per Unit</h3>
+          <p class="product-price">$3.00</p>
+          <input type="number" min="1" value="1" class="quantity-input">
+          <button class="add-to-cart" data-name="Paw paw per Unit" data-price="3.00">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+          <h3 class="product-title">Coconut per Unit</h3>
+          <p class="product-price">$1.00</p>
+          <input type="number" min="1" value="1" class="quantity-input">
+          <button class="add-to-cart" data-name="Coconut per Unit" data-price="1.00">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+          <h3 class="product-title">Cabbage per Head</h3>
+          <p class="product-price">$1.00</p>
+          <p class="product-unit">Unit: per head</p>
+          <button class="add-to-cart" data-name="Cabbage per Head" data-price="1.00">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+          <h3 class="product-title">Oranges per Pocket</h3>
+          <p class="product-price">$10.00</p>
+          <p class="product-unit">Unit: per pocket</p>
+          <button class="add-to-cart" data-name="Oranges per Pocket" data-price="10.00">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+          <h3 class="product-title">Oranges per kg</h3>
+          <p class="product-price">$1.50</p>
+          <p class="product-unit">Unit: per kg</p>
+          <button class="add-to-cart" data-name="Oranges per kg" data-price="1.50">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+          <h3 class="product-title">Cherry Tomatoes</h3>
+          <p class="product-quantity">per 500 grams</p>
+          <p class="product-price">$1.25</p>
+          <input type="number" min="1" value="1" class="quantity-input" />
+          <button class="add-to-cart" data-name="Cherry Tomatoes" data-price="1.25">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+          <h3 class="product-title">Carrots</h3>
+          <p class="product-quantity">per 400 grams</p>
+          <p class="product-price">$1.00</p>
+          <input type="number" min="1" value="1" class="quantity-input" />
+          <button class="add-to-cart" data-name="Carrots" data-price="1.00">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+          <h3 class="product-title">Tomatoes</h3>
+          <p class="product-quantity">per kg</p>
+          <p class="product-price">$0.75</p>
+          <input type="number" min="1" value="1" class="quantity-input" />
+          <button class="add-to-cart" data-name="Tomatoes" data-price="0.75">Add to Cart</button>
         </div>
 
       </div>
