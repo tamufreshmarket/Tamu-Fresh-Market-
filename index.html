@@ -15,7 +15,7 @@
       }
     </style>
   </head>
-  <body class="bg-white text-gray-800" onload="showHome()">
+  <body class="bg-white text-gray-800" onload="showHome(); renderCart()">
 
     <header class="bg-white text-green-700 shadow-sm sticky top-0 z-50">
       <div class="max-w-7xl mx-auto px-4 py-4 flex flex-col items-center text-center">
@@ -46,84 +46,74 @@
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 max-w-6xl mx-auto">
 
-        <div class="bg-white shadow-lg rounded-lg overflow-hidden">
-          <div class="p-4">
-            <h3 class="text-xl font-semibold text-green-700">Button Mushroom per Punnet</h3>
-            <p class="text-gray-600">Quantity: 1 Punnet</p>
-            <p class="text-gray-800 font-semibold">US$3.00</p>
-          </div>
+        <div class="text-center p-4 border border-green-200 rounded-lg">
+          <h3 class="text-xl font-semibold text-green-700">Button Mushroom per Punnet</h3>
+          <p class="text-gray-600">Quantity: 1 Punnet</p>
+          <p class="text-gray-800 font-semibold mb-3">US$3.00</p>
+          <button onclick="addToCart('Button Mushroom per Punnet', 3.00)" class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-md text-sm transition duration-300">Add to Cart</button>
         </div>
 
-        <div class="bg-white shadow-lg rounded-lg overflow-hidden">
-          <div class="p-4">
-            <h3 class="text-xl font-semibold text-green-700">Baby Marrow</h3>
-            <p class="text-gray-600">Size: 400g</p>
-            <p class="text-gray-800 font-semibold">US$1.00</p>
-          </div>
+        <div class="text-center p-4 border border-green-200 rounded-lg">
+          <h3 class="text-xl font-semibold text-green-700">Baby Marrow</h3>
+          <p class="text-gray-600">Size: 400g</p>
+          <p class="text-gray-800 font-semibold mb-3">US$1.00</p>
+          <button onclick="addToCart('Baby Marrow', 1.00)" class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-md text-sm transition duration-300">Add to Cart</button>
         </div>
 
-        <div class="bg-white shadow-lg rounded-lg overflow-hidden">
-          <div class="p-4">
-            <h3 class="text-xl font-semibold text-green-700">Apples</h3>
-            <p class="text-gray-600">Size: 500g</p>
-            <p class="text-gray-800 font-semibold">US$1.25</p>
-          </div>
+        <div class="text-center p-4 border border-green-200 rounded-lg">
+          <h3 class="text-xl font-semibold text-green-700">Apples</h3>
+          <p class="text-gray-600">Size: 500g</p>
+          <p class="text-gray-800 font-semibold mb-3">US$1.25</p>
+          <button onclick="addToCart('Apples', 1.25)" class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-md text-sm transition duration-300">Add to Cart</button>
         </div>
 
-        <div class="bg-white shadow-lg rounded-lg overflow-hidden">
-          <div class="p-4">
-            <h3 class="text-xl font-semibold text-green-700">Avocado</h3>
-            <p class="text-gray-600">Quantity: Per Unit</p>
-            <p class="text-gray-800 font-semibold">US$0.75</p>
-          </div>
+        <div class="text-center p-4 border border-green-200 rounded-lg">
+          <h3 class="text-xl font-semibold text-green-700">Avocado</h3>
+          <p class="text-gray-600">Quantity: Per Unit</p>
+          <p class="text-gray-800 font-semibold mb-3">US$0.75</p>
+          <button onclick="addToCart('Avocado', 0.75)" class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-md text-sm transition duration-300">Add to Cart</button>
         </div>
 
-        <div class="bg-white shadow-lg rounded-lg overflow-hidden">
-          <div class="p-4">
-            <h3 class="text-xl font-semibold text-green-700">Precut Potato Chips</h3>
-            <p class="text-gray-600">Size: 500g Pack</p>
-            <p class="text-gray-800 font-semibold">US$1.00</p>
-          </div>
+        <div class="text-center p-4 border border-green-200 rounded-lg">
+          <h3 class="text-xl font-semibold text-green-700">Precut Potato Chips</h3>
+          <p class="text-gray-600">Size: 500g Pack</p>
+          <p class="text-gray-800 font-semibold mb-3">US$1.00</p>
+          <button onclick="addToCart('Precut Potato Chips', 1.00)" class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-md text-sm transition duration-300">Add to Cart</button>
         </div>
 
-        <div class="bg-white shadow-lg rounded-lg overflow-hidden">
-          <div class="p-4">
-            <h3 class="text-xl font-semibold text-green-700">Banana</h3>
-            <p class="text-gray-600">Size: Bunch (Approx. 1kg)</p>
-            <p class="text-gray-800 font-semibold">US$1.50</p>
-          </div>
+        <div class="text-center p-4 border border-green-200 rounded-lg">
+          <h3 class="text-xl font-semibold text-green-700">Banana</h3>
+          <p class="text-gray-600">Size: Bunch (Approx. 1kg)</p>
+          <p class="text-gray-800 font-semibold mb-3">US$1.50</p>
+          <button onclick="addToCart('Banana', 1.50)" class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-md text-sm transition duration-300">Add to Cart</button>
         </div>
 
-        <div class="bg-white shadow-lg rounded-lg overflow-hidden">
-          <div class="p-4">
-            <h3 class="text-xl font-semibold text-green-700">Butternut</h3>
-            <p class="text-gray-600">Size: Per Unit (Medium)</p>
-            <p class="text-gray-800 font-semibold">US$0.80</p>
-          </div>
+        <div class="text-center p-4 border border-green-200 rounded-lg">
+          <h3 class="text-xl font-semibold text-green-700">Butternut</h3>
+          <p class="text-gray-600">Size: Per Unit (Medium)</p>
+          <p class="text-gray-800 font-semibold mb-3">US$0.80</p>
+          <button onclick="addToCart('Butternut', 0.80)" class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-md text-sm transition duration-300">Add to Cart</button>
         </div>
 
-        <div class="bg-white shadow-lg rounded-lg overflow-hidden">
-          <div class="p-4">
-            <h3 class="text-xl font-semibold text-green-700">Broccoli</h3>
-            <p class="text-gray-600">Size: 300g Bunch</p>
-            <p class="text-gray-800 font-semibold">US$1.75</p>
-          </div>
+        <div class="text-center p-4 border border-green-200 rounded-lg">
+          <h3 class="text-xl font-semibold text-green-700">Broccoli</h3>
+          <p class="text-gray-600">Size: 300g Bunch</p>
+          <p class="text-gray-800 font-semibold mb-3">US$1.75</p>
+          <button onclick="addToCart('Broccoli', 1.75)" class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-md text-sm transition duration-300">Add to Cart</button>
         </div>
 
-        <div class="bg-white shadow-lg rounded-lg overflow-hidden">
-          <div class="p-4">
-            <h3 class="text-xl font-semibold text-green-700">Cauliflower</h3>
-            <p class="text-gray-600">Size: 500g</p>
-            <p class="text-gray-800 font-semibold">US$1.50</p>
-          </div>
+        <div class="text-center p-4 border border-green-200 rounded-lg">
+          <h3 class="text-xl font-semibold text-green-700">Cauliflower</h3>
+          <p class="text-gray-600">Size: 500g</p>
+          <p class="text-gray-800 font-semibold mb-3">US$1.50</p>
+          <button onclick="addToCart('Cauliflower', 1.50)" class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-md text-sm transition duration-300">Add to Cart</button>
         </div>
 
-        <div class="bg-white shadow-lg rounded-lg overflow-hidden">
-          <div class="p-4">
-            <h3 class="text-xl font-semibold text-green-700">Green Beans</h3>
-            <p class="text-gray-600">Size: 400g</p>
-            <p class="text-gray-800 font-semibold">US$1.00</p>
-          </div>
+        <div class="text-center p-4 border border-green-200 rounded-lg">
+          <h3 class="text-xl font-semibold text-green-700">Green Beans</h3>
+          <p class="text-gray-600">Size: 400g</p>
+          <p class="text-gray-800 font-semibold mb-3">US$1.00</p>
+          <button onclick="addToCart('Green Beans', 1.00)" class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-md text-sm transition duration-300">Add to Cart</button>
         </div>
 
       </div>
@@ -160,6 +150,24 @@
     <footer class="bg-green-700 text-white text-center py-5">
       <p class="text-sm">&copy; 2025 Tamu Fresh Market. All rights reserved.</p>
     </footer>
+
+    <div id="cart" class="fixed right-0 top-0 w-80 bg-white h-full shadow-lg transform translate-x-full transition-transform duration-300 z-50 overflow-y-auto">
+      <div class="p-4 border-b flex justify-between items-center">
+        <h2 class="text-xl font-bold text-green-700">Your Cart</h2>
+        <button onclick="toggleCart()" class="text-gray-500 hover:text-red-500 text-2xl">&times;</button>
+      </div>
+      <div id="cart-items" class="p-4 space-y-4"></div>
+      <div class="p-4 border-t">
+        <p class="text-gray-700 mb-2">Total: <span id="cart-total">US$0.00</span></p>
+        <a id="checkout-link" href="#" target="_blank" rel="noopener" class="block text-center bg-green-700 hover:bg-green-800 text-white py-2 rounded font-semibold">
+          Checkout via WhatsApp
+        </a>
+      </div>
+    </div>
+
+    <button onclick="toggleCart()" class="fixed bottom-6 right-6 bg-green-700 text-white rounded-full w-14 h-14 shadow-lg text-xl hover:bg-green-800 z-50">
+      🛒
+    </button>
 
     <script>
       // Helper function to hide all sections
@@ -208,8 +216,66 @@
         }
       }
 
-      // Ensure the home section is shown on page load
-      window.onload = showHome;
+      // NEW CART FUNCTIONS (replacing previous ones)
+      let cart = [];
+
+      function toggleCart() {
+        const cartEl = document.getElementById('cart');
+        cartEl.classList.toggle('translate-x-full');
+      }
+
+      function addToCart(name, price) {
+        const existing = cart.find(item => item.name === name);
+        if (existing) {
+          existing.qty += 1;
+        } else {
+          cart.push({ name, price, qty: 1 });
+        }
+        renderCart();
+      }
+
+      function renderCart() {
+        const cartItems = document.getElementById('cart-items');
+        const cartTotal = document.getElementById('cart-total');
+        const checkoutLink = document.getElementById('checkout-link');
+        cartItems.innerHTML = '';
+
+        let total = 0;
+        let orderMsg = '*Tamu Fresh Market Order:*\n';
+
+        if (cart.length === 0) {
+            cartItems.innerHTML = '<p class="text-gray-500">Your cart is empty.</p>';
+            checkoutLink.href = `https://wa.me/263712560594?text=${encodeURIComponent("Hi Tamu Fresh Market! I'd like to inquire about your products.")}`;
+            checkoutLink.textContent = "Inquire on WhatsApp";
+        } else {
+            cart.forEach(item => {
+                const subtotal = item.price * item.qty;
+                total += subtotal;
+                orderMsg += `• ${item.name} x${item.qty} = $${subtotal.toFixed(2)}\n`;
+
+                const div = document.createElement('div');
+                div.className = 'flex justify-between items-center border-b pb-2';
+                div.innerHTML = `
+                  <div>
+                    <p class="font-semibold">${item.name}</p>
+                    <p class="text-sm text-gray-500">Qty: ${item.qty}</p>
+                  </div>
+                  <p class="font-medium">$${subtotal.toFixed(2)}</p>
+                `;
+                cartItems.appendChild(div);
+            });
+            checkoutLink.href = `https://wa.me/263712560594?text=${encodeURIComponent(orderMsg + '\nTotal: $' + total.toFixed(2))}`;
+            checkoutLink.textContent = "Checkout via WhatsApp";
+        }
+
+        cartTotal.textContent = `US$${total.toFixed(2)}`;
+      }
+
+      // Ensure the home section is shown and cart is rendered on page load
+      window.onload = () => {
+        showHome();
+        renderCart(); // Initial render of the cart when the page loads
+      };
     </script>
 
   </body>
