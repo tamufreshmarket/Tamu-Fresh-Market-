@@ -94,7 +94,7 @@
         font-weight: bold;
         padding: 0.5rem 0.75rem;
         border-radius: 0.25rem;
-        margin-left: 0.5rem;
+        margin: 0 0.25rem; /* Adjusted margin for buttons */
         min-width: 2.5rem; /* Ensure minimum width */
         text-align: center;
         vertical-align: middle;
@@ -105,6 +105,23 @@
         align-items: center;
         justify-content: center; /* Center the buttons and quantity box */
         margin-top: 0.5rem;
+      }
+      /* Style for quantity adjustment buttons */
+      .qty-btn {
+        background-color: #10b981; /* green-500 */
+        color: white;
+        padding: 0.25rem 0.5rem;
+        border-radius: 0.25rem;
+        cursor: pointer;
+        font-weight: bold;
+        transition: background-color 0.2s ease;
+      }
+      .qty-btn:hover {
+        background-color: #059669; /* green-600 */
+      }
+      .qty-btn:disabled {
+        background-color: #a7f3d0; /* green-200 */
+        cursor: not-allowed;
       }
     </style>
   </head>
@@ -178,8 +195,9 @@
           <p class="product-quantity">Quantity: 1 Punnet</p>
           <p class="product-price mb-3">US$3.00</p>
           <div class="product-actions">
-            <button class="add-to-cart" data-name="Button Mushroom per Punnet" data-price="3.00">Add to Cart</button>
+            <button class="qty-btn" data-action="decrease" data-product-name="Button Mushroom per Punnet">-</button>
             <span class="in-cart-qty" data-product-name="Button Mushroom per Punnet">0</span>
+            <button class="qty-btn" data-action="increase" data-product-name="Button Mushroom per Punnet">+</button>
           </div>
         </div>
 
@@ -188,8 +206,9 @@
           <p class="product-quantity">Size: 400g</p>
           <p class="product-price mb-3">US$1.00</p>
           <div class="product-actions">
-            <button class="add-to-cart" data-name="Baby Marrow" data-price="1.00">Add to Cart</button>
+            <button class="qty-btn" data-action="decrease" data-product-name="Baby Marrow">-</button>
             <span class="in-cart-qty" data-product-name="Baby Marrow">0</span>
+            <button class="qty-btn" data-action="increase" data-product-name="Baby Marrow">+</button>
           </div>
         </div>
 
@@ -198,8 +217,9 @@
           <p class="product-quantity">Size: 500g</p>
           <p class="product-price mb-3">US$1.25</p>
           <div class="product-actions">
-            <button class="add-to-cart" data-name="Apples" data-price="1.25">Add to Cart</button>
+            <button class="qty-btn" data-action="decrease" data-product-name="Apples">-</button>
             <span class="in-cart-qty" data-product-name="Apples">0</span>
+            <button class="qty-btn" data-action="increase" data-product-name="Apples">+</button>
           </div>
         </div>
 
@@ -208,8 +228,9 @@
           <p class="product-quantity">Quantity: Per Unit</p>
           <p class="product-price mb-3">US$0.75</p>
           <div class="product-actions">
-            <button class="add-to-cart" data-name="Avocado" data-price="0.75">Add to Cart</button>
+            <button class="qty-btn" data-action="decrease" data-product-name="Avocado">-</button>
             <span class="in-cart-qty" data-product-name="Avocado">0</span>
+            <button class="qty-btn" data-action="increase" data-product-name="Avocado">+</button>
           </div>
         </div>
 
@@ -218,8 +239,9 @@
           <p class="product-quantity">Size: 500g Pack</p>
           <p class="product-price mb-3">US$1.00</p>
           <div class="product-actions">
-            <button class="add-to-cart" data-name="Precut Potato Chips" data-price="1.00">Add to Cart</button>
+            <button class="qty-btn" data-action="decrease" data-product-name="Precut Potato Chips">-</button>
             <span class="in-cart-qty" data-product-name="Precut Potato Chips">0</span>
+            <button class="qty-btn" data-action="increase" data-product-name="Precut Potato Chips">+</button>
           </div>
         </div>
 
@@ -228,8 +250,9 @@
           <p class="product-quantity">Size: Bunch (Approx. 1kg)</p>
           <p class="product-price mb-3">US$1.50</p>
           <div class="product-actions">
-            <button class="add-to-cart" data-name="Banana" data-price="1.50">Add to Cart</button>
+            <button class="qty-btn" data-action="decrease" data-product-name="Banana">-</button>
             <span class="in-cart-qty" data-product-name="Banana">0</span>
+            <button class="qty-btn" data-action="increase" data-product-name="Banana">+</button>
           </div>
         </div>
 
@@ -238,8 +261,9 @@
           <p class="product-quantity">Size: Per Unit (Medium)</p>
           <p class="product-price mb-3">US$0.80</p>
           <div class="product-actions">
-            <button class="add-to-cart" data-name="Butternut" data-price="0.80">Add to Cart</button>
+            <button class="qty-btn" data-action="decrease" data-product-name="Butternut">-</button>
             <span class="in-cart-qty" data-product-name="Butternut">0</span>
+            <button class="qty-btn" data-action="increase" data-product-name="Butternut">+</button>
           </div>
         </div>
 
@@ -248,8 +272,9 @@
           <p class="product-quantity">Size: 300g Bunch</p>
           <p class="product-price mb-3">US$1.75</p>
           <div class="product-actions">
-            <button class="add-to-cart" data-name="Broccoli" data-price="1.75">Add to Cart</button>
+            <button class="qty-btn" data-action="decrease" data-product-name="Broccoli">-</button>
             <span class="in-cart-qty" data-product-name="Broccoli">0</span>
+            <button class="qty-btn" data-action="increase" data-product-name="Broccoli">+</button>
           </div>
         </div>
 
@@ -258,8 +283,9 @@
           <p class="product-quantity">Size: 500g</p>
           <p class="product-price mb-3">US$1.50</p>
           <div class="product-actions">
-            <button class="add-to-cart" data-name="Cauliflower" data-price="1.50">Add to Cart</button>
+            <button class="qty-btn" data-action="decrease" data-product-name="Cauliflower">-</button>
             <span class="in-cart-qty" data-product-name="Cauliflower">0</span>
+            <button class="qty-btn" data-action="increase" data-product-name="Cauliflower">+</button>
           </div>
         </div>
 
@@ -268,8 +294,9 @@
           <p class="product-quantity">Size: 400g</p>
           <p class="product-price mb-3">US$1.00</p>
           <div class="product-actions">
-            <button class="add-to-cart" data-name="Green Beans" data-price="1.00">Add to Cart</button>
+            <button class="qty-btn" data-action="decrease" data-product-name="Green Beans">-</button>
             <span class="in-cart-qty" data-product-name="Green Beans">0</span>
+            <button class="qty-btn" data-action="increase" data-product-name="Green Beans">+</button>
           </div>
         </div>
 
@@ -278,8 +305,9 @@
           <p class="product-quantity">Quantity: per Head</p>
           <p class="product-price">$2.00</p>
           <div class="product-actions">
-            <button class="add-to-cart" data-name="Red Cabbage" data-price="2.00">Add to Cart</button>
+            <button class="qty-btn" data-action="decrease" data-product-name="Red Cabbage">-</button>
             <span class="in-cart-qty" data-product-name="Red Cabbage">0</span>
+            <button class="qty-btn" data-action="increase" data-product-name="Red Cabbage">+</button>
           </div>
         </div>
 
@@ -288,8 +316,9 @@
           <p class="product-quantity">Quantity: per 400g</p>
           <p class="product-price">$1.00</p>
           <div class="product-actions">
-            <button class="add-to-cart" data-name="Okra" data-price="1.00">Add to Cart</button>
+            <button class="qty-btn" data-action="decrease" data-product-name="Okra">-</button>
             <span class="in-cart-qty" data-product-name="Okra">0</span>
+            <button class="qty-btn" data-action="increase" data-product-name="Okra">+</button>
           </div>
         </div>
 
@@ -298,8 +327,9 @@
           <p class="product-quantity">Quantity: per Kg</p>
           <p class="product-price">$0.80</p>
           <div class="product-actions">
-            <button class="add-to-cart" data-name="Onions" data-price="0.80">Add to Cart</button>
+            <button class="qty-btn" data-action="decrease" data-product-name="Onions">-</button>
             <span class="in-cart-qty" data-product-name="Onions">0</span>
+            <button class="qty-btn" data-action="increase" data-product-name="Onions">+</button>
           </div>
         </div>
 
@@ -308,8 +338,9 @@
           <p class="product-price">US$0.50</p>
           <p class="product-description">Cove | Rape</p>
           <div class="product-actions">
-            <button class="add-to-cart" data-name="Vegetables per Bundle (Cove | Rape)" data-price="0.50">Add to Cart</button>
+            <button class="qty-btn" data-action="decrease" data-product-name="Vegetables per Bundle (Cove | Rape)">-</button>
             <span class="in-cart-qty" data-product-name="Vegetables per Bundle (Cove | Rape)">0</span>
+            <button class="qty-btn" data-action="increase" data-product-name="Vegetables per Bundle (Cove | Rape)">+</button>
           </div>
         </div>
 
@@ -317,8 +348,9 @@
           <h3 class="product-title">Beetroot per Punnet</h3>
           <p class="product-price">US$1.50</p>
           <div class="product-actions">
-            <button class="add-to-cart" data-name="Beetroot per Punnet" data-price="1.50">Add to Cart</button>
+            <button class="qty-btn" data-action="decrease" data-product-name="Beetroot per Punnet">-</button>
             <span class="in-cart-qty" data-product-name="Beetroot per Punnet">0</span>
+            <button class="qty-btn" data-action="increase" data-product-name="Beetroot per Punnet">+</button>
           </div>
         </div>
 
@@ -326,8 +358,9 @@
           <h3 class="product-title">Cucumber per kg</h3>
           <p class="product-price">US$1.00</p>
           <div class="product-actions">
-            <button class="add-to-cart" data-name="Cucumber per kg" data-price="1.00">Add to Cart</button>
+            <button class="qty-btn" data-action="decrease" data-product-name="Cucumber per kg">-</button>
             <span class="in-cart-qty" data-product-name="Cucumber per kg">0</span>
+            <button class="qty-btn" data-action="increase" data-product-name="Cucumber per kg">+</button>
           </div>
         </div>
 
@@ -336,8 +369,9 @@
           <p class="product-quantity">Per unit</p>
           <p class="product-price">$1.25</p>
           <div class="product-actions">
-            <button class="add-to-cart" data-name="English Cucumber" data-price="1.25">Add to Cart</button>
+            <button class="qty-btn" data-action="decrease" data-product-name="English Cucumber">-</button>
             <span class="in-cart-qty" data-product-name="English Cucumber">0</span>
+            <button class="qty-btn" data-action="increase" data-product-name="English Cucumber">+</button>
           </div>
         </div>
 
@@ -346,8 +380,9 @@
           <p class="product-quantity">Per 500 grams</p>
           <p class="product-price">$2.00</p>
           <div class="product-actions">
-            <button class="add-to-cart" data-name="Peas" data-price="2.00">Add to Cart</button>
+            <button class="qty-btn" data-action="decrease" data-product-name="Peas">-</button>
             <span class="in-cart-qty" data-product-name="Peas">0</span>
+            <button class="qty-btn" data-action="increase" data-product-name="Peas">+</button>
           </div>
         </div>
 
@@ -356,8 +391,9 @@
           <p class="product-quantity">Per bundle</p>
           <p class="product-price">$1.00</p>
           <div class="product-actions">
-            <button class="add-to-cart" data-name="Parsley" data-price="1.00">Add to Cart</button>
+            <button class="qty-btn" data-action="decrease" data-product-name="Parsley">-</button>
             <span class="in-cart-qty" data-product-name="Parsley">0</span>
+            <button class="qty-btn" data-action="increase" data-product-name="Parsley">+</button>
           </div>
         </div>
 
@@ -366,8 +402,9 @@
           <p class="product-quantity">per 100 grams</p>
           <p class="product-price">$0.80</p>
           <div class="product-actions">
-            <button class="add-to-cart" data-name="Garlic" data-price="0.80">Add to Cart</button>
+            <button class="qty-btn" data-action="decrease" data-product-name="Garlic">-</button>
             <span class="in-cart-qty" data-product-name="Garlic">0</span>
+            <button class="qty-btn" data-action="increase" data-product-name="Garlic">+</button>
           </div>
         </div>
 
@@ -376,8 +413,9 @@
           <p class="product-quantity">per 500 grams</p>
           <p class="product-price">$1.00</p>
           <div class="product-actions">
-            <button class="add-to-cart" data-name="Green Pepper" data-price="1.00">Add to Cart</button>
+            <button class="qty-btn" data-action="decrease" data-product-name="Green Pepper">-</button>
             <span class="in-cart-qty" data-product-name="Green Pepper">0</span>
+            <button class="qty-btn" data-action="increase" data-product-name="Green Pepper">+</button>
           </div>
         </div>
 
@@ -386,8 +424,9 @@
           <p class="product-quantity">per kg</p>
           <p class="product-price">$0.80</p>
           <div class="product-actions">
-            <button class="add-to-cart" data-name="Sweet Potato" data-price="0.80">Add to Cart</button>
+            <button class="qty-btn" data-action="decrease" data-product-name="Sweet Potato">-</button>
             <span class="in-cart-qty" data-product-name="Sweet Potato">0</span>
+            <button class="qty-btn" data-action="increase" data-product-name="Sweet Potato">+</button>
           </div>
         </div>
 
@@ -395,8 +434,9 @@
           <h3 class="product-title">Red Onion per 500 grams</h3>
           <p class="product-price">$1.50</p>
           <div class="product-actions">
-            <button class="add-to-cart" data-name="Red Onion per 500 grams" data-price="1.50">Add to Cart</button>
+            <button class="qty-btn" data-action="decrease" data-product-name="Red Onion per 500 grams">-</button>
             <span class="in-cart-qty" data-product-name="Red Onion per 500 grams">0</span>
+            <button class="qty-btn" data-action="increase" data-product-name="Red Onion per 500 grams">+</button>
           </div>
         </div>
 
@@ -404,8 +444,9 @@
           <h3 class="product-title">Strawberries per Punnet</h3>
           <p class="product-price">$2.50</p>
           <div class="product-actions">
-            <button class="add-to-cart" data-name="Strawberries per Punnet" data-price="2.50">Add to Cart</button>
+            <button class="qty-btn" data-action="decrease" data-product-name="Strawberries per Punnet">-</button>
             <span class="in-cart-qty" data-product-name="Strawberries per Punnet">0</span>
+            <button class="qty-btn" data-action="increase" data-product-name="Strawberries per Punnet">+</button>
           </div>
         </div>
 
@@ -413,8 +454,9 @@
           <h3 class="product-title">Blueberries per Punnet</h3>
           <p class="product-price">$2.50</p>
           <div class="product-actions">
-            <button class="add-to-cart" data-name="Blueberries per Punnet" data-price="2.50">Add to Cart</button>
+            <button class="qty-btn" data-action="decrease" data-product-name="Blueberries per Punnet">-</button>
             <span class="in-cart-qty" data-product-name="Blueberries per Punnet">0</span>
+            <button class="qty-btn" data-action="increase" data-product-name="Blueberries per Punnet">+</button>
           </div>
         </div>
 
@@ -423,8 +465,9 @@
           <p class="product-quantity">Quantity: per kg</p>
           <p class="product-price">$2.50</p>
           <div class="product-actions">
-            <button class="add-to-cart" data-name="Nartjies" data-price="2.50">Add to Cart</button>
+            <button class="qty-btn" data-action="decrease" data-product-name="Nartjies">-</button>
             <span class="in-cart-qty" data-product-name="Nartjies">0</span>
+            <button class="qty-btn" data-action="increase" data-product-name="Nartjies">+</button>
           </div>
         </div>
 
@@ -433,8 +476,9 @@
           <p class="product-quantity">Quantity: per punnet</p>
           <p class="product-price">$1.50</p>
           <div class="product-actions">
-            <button class="add-to-cart" data-name="Pears" data-price="1.50">Add to Cart</button>
+            <button class="qty-btn" data-action="decrease" data-product-name="Pears">-</button>
             <span class="in-cart-qty" data-product-name="Pears">0</span>
+            <button class="qty-btn" data-action="increase" data-product-name="Pears">+</button>
           </div>
         </div>
 
@@ -443,8 +487,9 @@
           <p class="product-quantity">Quantity: per punnet</p>
           <p class="product-price">$2.00</p>
           <div class="product-actions">
-            <button class="add-to-cart" data-name="Plums" data-price="2.00">Add to Cart</button>
+            <button class="qty-btn" data-action="decrease" data-product-name="Plums">-</button>
             <span class="in-cart-qty" data-product-name="Plums">0</span>
+            <button class="qty-btn" data-action="increase" data-product-name="Plums">+</button>
           </div>
         </div>
 
@@ -453,8 +498,9 @@
           <p class="product-quantity">Quantity: 1 Unit</p>
           <p class="product-price">$4.00</p>
           <div class="product-actions">
-            <button class="add-to-cart" data-name="Water Melon" data-price="4.00">Add to Cart</button>
+            <button class="qty-btn" data-action="decrease" data-product-name="Water Melon">-</button>
             <span class="in-cart-qty" data-product-name="Water Melon">0</span>
+            <button class="qty-btn" data-action="increase" data-product-name="Water Melon">+</button>
           </div>
         </div>
 
@@ -463,8 +509,9 @@
           <p class="product-quantity">Quantity: 250g</p>
           <p class="product-price">$1.00</p>
           <div class="product-actions">
-            <button class="add-to-cart" data-name="Lettuce Leaves" data-price="1.00">Add to Cart</button>
+            <button class="qty-btn" data-action="decrease" data-product-name="Lettuce Leaves">-</button>
             <span class="in-cart-qty" data-product-name="Lettuce Leaves">0</span>
+            <button class="qty-btn" data-action="increase" data-product-name="Lettuce Leaves">+</button>
           </div>
         </div>
 
@@ -473,8 +520,9 @@
           <p class="product-quantity">Quantity: 400g</p>
           <p class="product-price">$1.50</p>
           <div class="product-actions">
-            <button class="add-to-cart" data-name="Precut Okra" data-price="1.50">Add to Cart</button>
+            <button class="qty-btn" data-action="decrease" data-product-name="Precut Okra">-</button>
             <span class="in-cart-qty" data-product-name="Precut Okra">0</span>
+            <button class="qty-btn" data-action="increase" data-product-name="Precut Okra">+</button>
           </div>
         </div>
 
@@ -483,8 +531,9 @@
           <p class="product-quantity">400 grams</p>
           <p class="product-price">$1.50</p>
           <div class="product-actions">
-            <button class="add-to-cart" data-name="Precut Red Onion" data-price="1.50">Add to Cart</button>
+            <button class="qty-btn" data-action="decrease" data-product-name="Precut Red Onion">-</button>
             <span class="in-cart-qty" data-product-name="Precut Red Onion">0</span>
+            <button class="qty-btn" data-action="increase" data-product-name="Precut Red Onion">+</button>
           </div>
         </div>
 
@@ -493,8 +542,9 @@
           <p class="product-quantity">500 grams</p>
           <p class="product-price">$0.75</p>
           <div class="product-actions">
-            <button class="add-to-cart" data-name="Diced Butternut Squash" data-price="0.75">Add to Cart</button>
+            <button class="qty-btn" data-action="decrease" data-product-name="Diced Butternut Squash">-</button>
             <span class="in-cart-qty" data-product-name="Diced Butternut Squash">0</span>
+            <button class="qty-btn" data-action="increase" data-product-name="Diced Butternut Squash">+</button>
           </div>
         </div>
 
@@ -503,8 +553,9 @@
           <p class="product-quantity">500 grams</p>
           <p class="product-price">$1.00</p>
           <div class="product-actions">
-            <button class="add-to-cart" data-name="Peeled Sweet Potato" data-price="1.00">Add to Cart</button>
+            <button class="qty-btn" data-action="decrease" data-product-name="Peeled Sweet Potato">-</button>
             <span class="in-cart-qty" data-product-name="Peeled Sweet Potato">0</span>
+            <button class="qty-btn" data-action="increase" data-product-name="Peeled Sweet Potato">+</button>
           </div>
         </div>
 
@@ -512,8 +563,9 @@
           <h3 class="product-title">Peeled Butternut 500grams Pack</h3>
           <p class="product-price">US$0.75</p>
           <div class="product-actions">
-            <button class="add-to-cart" data-name="Peeled Butternut 500grams Pack" data-price="0.75">Add to Cart</button>
+            <button class="qty-btn" data-action="decrease" data-product-name="Peeled Butternut 500grams Pack">-</button>
             <span class="in-cart-qty" data-product-name="Peeled Butternut 500grams Pack">0</span>
+            <button class="qty-btn" data-action="increase" data-product-name="Peeled Butternut 500grams Pack">+</button>
           </div>
         </div>
 
@@ -521,8 +573,9 @@
           <h3 class="product-title">Precut Green Pepper 500grams Pack</h3>
           <p class="product-price">US$1.25</p>
           <div class="product-actions">
-            <button class="add-to-cart" data-name="Precut Green Pepper 500grams Pack" data-price="1.25">Add to Cart</button>
+            <button class="qty-btn" data-action="decrease" data-product-name="Precut Green Pepper 500grams Pack">-</button>
             <span class="in-cart-qty" data-product-name="Precut Green Pepper 500grams Pack">0</span>
+            <button class="qty-btn" data-action="increase" data-product-name="Precut Green Pepper 500grams Pack">+</button>
           </div>
         </div>
 
@@ -530,8 +583,9 @@
           <h3 class="product-title">Precut White Onion 400grams Pack</h3>
           <p class="product-price">US$1.00</p>
           <div class="product-actions">
-            <button class="add-to-cart" data-name="Precut White Onion 400grams Pack" data-price="1.00">Add to Cart</button>
+            <button class="qty-btn" data-action="decrease" data-product-name="Precut White Onion 400grams Pack">-</button>
             <span class="in-cart-qty" data-product-name="Precut White Onion 400grams Pack">0</span>
+            <button class="qty-btn" data-action="increase" data-product-name="Precut White Onion 400grams Pack">+</button>
           </div>
         </div>
 
@@ -540,8 +594,9 @@
           <p class="product-quantity">100 grams Pack</p>
           <p class="product-price">$1.50</p>
           <div class="product-actions">
-            <button class="add-to-cart" data-name="Peeled garlic" data-price="1.50">Add to Cart</button>
+            <button class="qty-btn" data-action="decrease" data-product-name="Peeled garlic">-</button>
             <span class="in-cart-qty" data-product-name="Peeled garlic">0</span>
+            <button class="qty-btn" data-action="increase" data-product-name="Peeled garlic">+</button>
           </div>
         </div>
 
@@ -550,8 +605,9 @@
           <p class="product-quantity">500 grams Pack</p>
           <p class="product-price">$0.80</p>
           <div class="product-actions">
-            <button class="add-to-cart" data-name="Shredded White Cabbage" data-price="0.80">Add to Cart</button>
+            <button class="qty-btn" data-action="decrease" data-product-name="Shredded White Cabbage">-</button>
             <span class="in-cart-qty" data-product-name="Shredded White Cabbage">0</span>
+            <button class="qty-btn" data-action="increase" data-product-name="Shredded White Cabbage">+</button>
           </div>
         </div>
 
@@ -560,8 +616,9 @@
           <p class="product-quantity">500 grams Pack</p>
           <p class="product-price">$1.25</p>
           <div class="product-actions">
-            <button class="add-to-cart" data-name="Shredded Carrots" data-price="1.25">Add to Cart</button>
+            <button class="qty-btn" data-action="decrease" data-product-name="Shredded Carrots">-</button>
             <span class="in-cart-qty" data-product-name="Shredded Carrots">0</span>
+            <button class="qty-btn" data-action="increase" data-product-name="Shredded Carrots">+</button>
           </div>
         </div>
 
@@ -570,8 +627,9 @@
           <p class="product-quantity">Quantity: 400g</p>
           <p class="product-price">$0.75</p>
           <div class="product-actions">
-            <button class="add-to-cart" data-name="Precut Vegetable 400grams Pack" data-price="0.75">Add to Cart</button>
+            <button class="qty-btn" data-action="decrease" data-product-name="Precut Vegetable 400grams Pack">-</button>
             <span class="in-cart-qty" data-product-name="Precut Vegetable 400grams Pack">0</span>
+            <button class="qty-btn" data-action="increase" data-product-name="Precut Vegetable 400grams Pack">+</button>
           </div>
         </div>
 
@@ -580,8 +638,9 @@
           <p class="product-quantity">Quantity: 500g</p>
           <p class="product-price">$1.00</p>
           <div class="product-actions">
-            <button class="add-to-cart" data-name="Precut Potato Wedge 500gram Pack" data-price="1.00">Add to Cart</button>
+            <button class="qty-btn" data-action="decrease" data-product-name="Precut Potato Wedge 500gram Pack">-</button>
             <span class="in-cart-qty" data-product-name="Precut Potato Wedge 500gram Pack">0</span>
+            <button class="qty-btn" data-action="increase" data-product-name="Precut Potato Wedge 500gram Pack">+</button>
           </div>
         </div>
 
@@ -590,8 +649,9 @@
           <p class="product-quantity">Quantity: 500g</p>
           <p class="product-price">$1.50</p>
           <div class="product-actions">
-            <button class="add-to-cart" data-name="Shredded Red Cabbage 500grams" data-price="1.50">Add to Cart</button>
+            <button class="qty-btn" data-action="decrease" data-product-name="Shredded Red Cabbage 500grams">-</button>
             <span class="in-cart-qty" data-product-name="Shredded Red Cabbage 500grams">0</span>
+            <button class="qty-btn" data-action="increase" data-product-name="Shredded Red Cabbage 500grams">+</button>
           </div>
         </div>
 
@@ -600,8 +660,9 @@
           <p class="product-quantity">400 grams</p>
           <p class="product-price">$2.75</p>
           <div class="product-actions">
-            <button class="add-to-cart" data-name="Precut Celery Pack" data-price="2.75">Add to Cart</button>
+            <button class="qty-btn" data-action="decrease" data-product-name="Precut Celery Pack">-</button>
             <span class="in-cart-qty" data-product-name="Precut Celery Pack">0</span>
+            <button class="qty-btn" data-action="increase" data-product-name="Precut Celery Pack">+</button>
           </div>
         </div>
 
@@ -610,8 +671,9 @@
           <p class="product-quantity">500 grams</p>
           <p class="product-price">$1.50</p>
           <div class="product-actions">
-            <button class="add-to-cart" data-name="Mixed Vegetables Pack" data-price="1.50">Add to Cart</button>
+            <button class="qty-btn" data-action="decrease" data-product-name="Mixed Vegetables Pack">-</button>
             <span class="in-cart-qty" data-product-name="Mixed Vegetables Pack">0</span>
+            <button class="qty-btn" data-action="increase" data-product-name="Mixed Vegetables Pack">+</button>
           </div>
         </div>
 
@@ -620,8 +682,9 @@
           <p class="product-quantity">500 grams</p>
           <p class="product-price">$1.75</p>
           <div class="product-actions">
-            <button class="add-to-cart" data-name="Precut Cauliflower Pack" data-price="1.75">Add to Cart</button>
+            <button class="qty-btn" data-action="decrease" data-product-name="Precut Cauliflower Pack">-</button>
             <span class="in-cart-qty" data-product-name="Precut Cauliflower Pack">0</span>
+            <button class="qty-btn" data-action="increase" data-product-name="Precut Cauliflower Pack">+</button>
           </div>
         </div>
 
@@ -629,8 +692,9 @@
           <h3 class="product-title">Precut Red Pepper 400grams Pack</h3>
           <p class="product-price">$1.75</p>
           <div class="product-actions">
-            <button class="add-to-cart" data-name="Precut Red Pepper 400grams Pack" data-price="1.75">Add to Cart</button>
+            <button class="qty-btn" data-action="decrease" data-product-name="Precut Red Pepper 400grams Pack">-</button>
             <span class="in-cart-qty" data-product-name="Precut Red Pepper 400grams Pack">0</span>
+            <button class="qty-btn" data-action="increase" data-product-name="Precut Red Pepper 400grams Pack">+</button>
           </div>
         </div>
 
@@ -638,8 +702,9 @@
           <h3 class="product-title">Precut Yellow Pepper 400grams Pack</h3>
           <p class="product-price">$1.75</p>
           <div class="product-actions">
-            <button class="add-to-cart" data-name="Precut Yellow Pepper 400grams Pack" data-price="1.75">Add to Cart</button>
+            <button class="qty-btn" data-action="decrease" data-product-name="Precut Yellow Pepper 400grams Pack">-</button>
             <span class="in-cart-qty" data-product-name="Precut Yellow Pepper 400grams Pack">0</span>
+            <button class="qty-btn" data-action="increase" data-product-name="Precut Yellow Pepper 400grams Pack">+</button>
           </div>
         </div>
 
@@ -647,8 +712,9 @@
           <h3 class="product-title">Precut Broccoli 500gram pack</h3>
           <p class="product-price">$1.75</p>
           <div class="product-actions">
-            <button class="add-to-cart" data-name="Precut Broccoli 500gram pack" data-price="1.75">Add to Cart</button>
+            <button class="qty-btn" data-action="decrease" data-product-name="Precut Broccoli 500gram pack">-</button>
             <span class="in-cart-qty" data-product-name="Precut Broccoli 500gram pack">0</span>
+            <button class="qty-btn" data-action="increase" data-product-name="Precut Broccoli 500gram pack">+</button>
           </div>
         </div>
 
@@ -657,8 +723,9 @@
           <p class="product-price">US$1.00</p>
           <p class="product-quantity">Quantity: 1 bunch</p>
           <div class="product-actions">
-            <button class="add-to-cart" data-name="Coriander Bunch" data-price="1.00">Add to Cart</button>
+            <button class="qty-btn" data-action="decrease" data-product-name="Coriander Bunch">-</button>
             <span class="in-cart-qty" data-product-name="Coriander Bunch">0</span>
+            <button class="qty-btn" data-action="increase" data-product-name="Coriander Bunch">+</button>
           </div>
         </div>
 
@@ -667,8 +734,9 @@
           <p class="product-price">US$0.40</p>
           <p class="product-quantity">Quantity: 1 unit</p>
           <div class="product-actions">
-            <button class="add-to-cart" data-name="Green Maize" data-price="0.40">Add to Cart</button>
+            <button class="qty-btn" data-action="decrease" data-product-name="Green Maize">-</button>
             <span class="in-cart-qty" data-product-name="Green Maize">0</span>
+            <button class="qty-btn" data-action="increase" data-product-name="Green Maize">+</button>
           </div>
         </div>
 
@@ -677,8 +745,9 @@
           <p class="product-price">US$2.50</p>
           <p class="product-quantity">Quantity: 250 grams</p>
           <div class="product-actions">
-            <button class="add-to-cart" data-name="Mopane Worms (Madora)" data-price="2.50">Add to Cart</button>
+            <button class="qty-btn" data-action="decrease" data-product-name="Mopane Worms (Madora)">-</button>
             <span class="in-cart-qty" data-product-name="Mopane Worms (Madora)">0</span>
+            <button class="qty-btn" data-action="increase" data-product-name="Mopane Worms (Madora)">+</button>
           </div>
         </div>
 
@@ -687,8 +756,9 @@
           <p class="product-quantity">250 grams</p>
           <p class="product-price">$1.00</p>
           <div class="product-actions">
-            <button class="add-to-cart" data-name="Baobab Fruit" data-price="1.00">Add to Cart</button>
+            <button class="qty-btn" data-action="decrease" data-product-name="Baobab Fruit">-</button>
             <span class="in-cart-qty" data-product-name="Baobab Fruit">0</span>
+            <button class="qty-btn" data-action="increase" data-product-name="Baobab Fruit">+</button>
           </div>
         </div>
 
@@ -697,8 +767,9 @@
           <p class="product-quantity">500 grams</p>
           <p class="product-price">$2.00</p>
           <div class="product-actions">
-            <button class="add-to-cart" data-name="Groundnuts" data-price="2.00">Add to Cart</button>
+            <button class="qty-btn" data-action="decrease" data-product-name="Groundnuts">-</button>
             <span class="in-cart-qty" data-product-name="Groundnuts">0</span>
+            <button class="qty-btn" data-action="increase" data-product-name="Groundnuts">+</button>
           </div>
         </div>
 
@@ -707,8 +778,9 @@
           <p class="product-quantity">250 grams</p>
           <p class="product-price">$2.00</p>
           <div class="product-actions">
-            <button class="add-to-cart" data-name="Chilli" data-price="2.00">Add to Cart</button>
+            <button class="qty-btn" data-action="decrease" data-product-name="Chilli">-</button>
             <span class="in-cart-qty" data-product-name="Chilli">0</span>
+            <button class="qty-btn" data-action="increase" data-product-name="Chilli">+</button>
           </div>
         </div>
 
@@ -716,8 +788,9 @@
           <h3 class="product-title">Yellow Pepper</h3>
           <p class="product-price">US$1.75 per 500grams</p>
           <div class="product-actions">
-            <button class="add-to-cart" data-name="Yellow Pepper" data-price="1.75">Add to Cart</button>
+            <button class="qty-btn" data-action="decrease" data-product-name="Yellow Pepper">-</button>
             <span class="in-cart-qty" data-product-name="Yellow Pepper">0</span>
+            <button class="qty-btn" data-action="increase" data-product-name="Yellow Pepper">+</button>
           </div>
         </div>
 
@@ -725,8 +798,9 @@
           <h3 class="product-title">Red Pepper</h3>
           <p class="product-price">US$1.75 per 500grams</p>
           <div class="product-actions">
-            <button class="add-to-cart" data-name="Red Pepper" data-price="1.75">Add to Cart</button>
+            <button class="qty-btn" data-action="decrease" data-product-name="Red Pepper">-</button>
             <span class="in-cart-qty" data-product-name="Red Pepper">0</span>
+            <button class="qty-btn" data-action="increase" data-product-name="Red Pepper">+</button>
           </div>
         </div>
 
@@ -734,8 +808,9 @@
           <h3 class="product-title">Pumpkin</h3>
           <p class="product-price">US$5.00 per unit</p>
           <div class="product-actions">
-            <button class="add-to-cart" data-name="Pumpkin" data-price="5.00">Add to Cart</button>
+            <button class="qty-btn" data-action="decrease" data-product-name="Pumpkin">-</button>
             <span class="in-cart-qty" data-product-name="Pumpkin">0</span>
+            <button class="qty-btn" data-action="increase" data-product-name="Pumpkin">+</button>
           </div>
         </div>
 
@@ -744,8 +819,9 @@
             <p class="product-quantity">500 grams</p>
             <p class="product-price">$1.00</p>
             <div class="product-actions">
-              <button class="add-to-cart" data-name="Lemons" data-price="1.00">Add to Cart</button>
+              <button class="qty-btn" data-action="decrease" data-product-name="Lemons">-</button>
               <span class="in-cart-qty" data-product-name="Lemons">0</span>
+              <button class="qty-btn" data-action="increase" data-product-name="Lemons">+</button>
             </div>
         </div>
 
@@ -754,8 +830,9 @@
             <p class="product-quantity">10kg</p>
             <p class="product-price">$11.00</p>
             <div class="product-actions">
-              <button class="add-to-cart" data-name="Potato Large 10kg" data-price="11.00">Add to Cart</button>
+              <button class="qty-btn" data-action="decrease" data-product-name="Potato Large 10kg">-</button>
               <span class="in-cart-qty" data-product-name="Potato Large 10kg">0</span>
+              <button class="qty-btn" data-action="increase" data-product-name="Potato Large 10kg">+</button>
             </div>
         </div>
 
@@ -764,8 +841,9 @@
             <p class="product-quantity">15kg</p>
             <p class="product-price">$13.00</p>
             <div class="product-actions">
-              <button class="add-to-cart" data-name="Potato Large 15kg" data-price="13.00">Add to Cart</button>
+              <button class="qty-btn" data-action="decrease" data-product-name="Potato Large 15kg">-</button>
               <span class="in-cart-qty" data-product-name="Potato Large 15kg">0</span>
+              <button class="qty-btn" data-action="increase" data-product-name="Potato Large 15kg">+</button>
             </div>
         </div>
 
@@ -774,8 +852,9 @@
           <p class="product-quantity">15kg</p>
           <p class="product-price">$11.00</p>
           <div class="product-actions">
-            <button class="add-to-cart" data-name="Potato Medium 15kg" data-price="11.00">Add to Cart</button>
+            <button class="qty-btn" data-action="decrease" data-product-name="Potato Medium 15kg">-</button>
             <span class="in-cart-qty" data-product-name="Potato Medium 15kg">0</span>
+            <button class="qty-btn" data-action="increase" data-product-name="Potato Medium 15kg">+</button>
           </div>
         </div>
 
@@ -784,8 +863,9 @@
           <p class="product-quantity">5kg</p>
           <p class="product-price">$6.00</p>
           <div class="product-actions">
-            <button class="add-to-cart" data-name="Potato Large 5kg" data-price="6.00">Add to Cart</button>
+            <button class="qty-btn" data-action="decrease" data-product-name="Potato Large 5kg">-</button>
             <span class="in-cart-qty" data-product-name="Potato Large 5kg">0</span>
+            <button class="qty-btn" data-action="increase" data-product-name="Potato Large 5kg">+</button>
           </div>
         </div>
 
@@ -794,8 +874,9 @@
           <p class="product-quantity">5kg</p>
           <p class="product-price">$5.00</p>
           <div class="product-actions">
-            <button class="add-to-cart" data-name="Potato Medium 5kg" data-price="5.00">Add to Cart</button>
+            <button class="qty-btn" data-action="decrease" data-product-name="Potato Medium 5kg">-</button>
             <span class="in-cart-qty" data-product-name="Potato Medium 5kg">0</span>
+            <button class="qty-btn" data-action="increase" data-product-name="Potato Medium 5kg">+</button>
           </div>
         </div>
 
@@ -803,8 +884,9 @@
           <h3 class="product-title">Grapes per Punnet</h3>
           <p class="product-price">$2.50</p>
           <div class="product-actions">
-            <button class="add-to-cart" data-name="Grapes per Punnet" data-price="2.50">Add to Cart</button>
+            <button class="qty-btn" data-action="decrease" data-product-name="Grapes per Punnet">-</button>
             <span class="in-cart-qty" data-product-name="Grapes per Punnet">0</span>
+            <button class="qty-btn" data-action="increase" data-product-name="Grapes per Punnet">+</button>
           </div>
         </div>
 
@@ -812,8 +894,9 @@
           <h3 class="product-title">Paw paw per Unit</h3>
           <p class="product-price">$3.00</p>
           <div class="product-actions">
-            <button class="add-to-cart" data-name="Paw paw per Unit" data-price="3.00">Add to Cart</button>
+            <button class="qty-btn" data-action="decrease" data-product-name="Paw paw per Unit">-</button>
             <span class="in-cart-qty" data-product-name="Paw paw per Unit">0</span>
+            <button class="qty-btn" data-action="increase" data-product-name="Paw paw per Unit">+</button>
           </div>
         </div>
 
@@ -821,8 +904,9 @@
           <h3 class="product-title">Coconut per Unit</h3>
           <p class="product-price">$1.00</p>
           <div class="product-actions">
-            <button class="add-to-cart" data-name="Coconut per Unit" data-price="1.00">Add to Cart</button>
+            <button class="qty-btn" data-action="decrease" data-product-name="Coconut per Unit">-</button>
             <span class="in-cart-qty" data-product-name="Coconut per Unit">0</span>
+            <button class="qty-btn" data-action="increase" data-product-name="Coconut per Unit">+</button>
           </div>
         </div>
 
@@ -831,8 +915,9 @@
           <p class="product-price">$1.00</p>
           <p class="product-unit">Unit: per head</p>
           <div class="product-actions">
-            <button class="add-to-cart" data-name="Cabbage per Head" data-price="1.00">Add to Cart</button>
+            <button class="qty-btn" data-action="decrease" data-product-name="Cabbage per Head">-</button>
             <span class="in-cart-qty" data-product-name="Cabbage per Head">0</span>
+            <button class="qty-btn" data-action="increase" data-product-name="Cabbage per Head">+</button>
           </div>
         </div>
 
@@ -841,8 +926,9 @@
           <p class="product-price">$10.00</p>
           <p class="product-unit">Unit: per pocket</p>
           <div class="product-actions">
-            <button class="add-to-cart" data-name="Oranges per Pocket" data-price="10.00">Add to Cart</button>
+            <button class="qty-btn" data-action="decrease" data-product-name="Oranges per Pocket">-</button>
             <span class="in-cart-qty" data-product-name="Oranges per Pocket">0</span>
+            <button class="qty-btn" data-action="increase" data-product-name="Oranges per Pocket">+</button>
           </div>
         </div>
 
@@ -851,8 +937,9 @@
           <p class="product-price">$1.50</p>
           <p class="product-unit">Unit: per kg</p>
           <div class="product-actions">
-            <button class="add-to-cart" data-name="Oranges per kg" data-price="1.50">Add to Cart</button>
+            <button class="qty-btn" data-action="decrease" data-product-name="Oranges per kg">-</button>
             <span class="in-cart-qty" data-product-name="Oranges per kg">0</span>
+            <button class="qty-btn" data-action="increase" data-product-name="Oranges per kg">+</button>
           </div>
         </div>
 
@@ -861,8 +948,9 @@
           <p class="product-quantity">per 500 grams</p>
           <p class="product-price">$1.25</p>
           <div class="product-actions">
-            <button class="add-to-cart" data-name="Cherry Tomatoes" data-price="1.25">Add to Cart</button>
+            <button class="qty-btn" data-action="decrease" data-product-name="Cherry Tomatoes">-</button>
             <span class="in-cart-qty" data-product-name="Cherry Tomatoes">0</span>
+            <button class="qty-btn" data-action="increase" data-product-name="Cherry Tomatoes">+</button>
           </div>
         </div>
 
@@ -871,8 +959,9 @@
           <p class="product-quantity">per 400 grams</p>
           <p class="product-price">$1.00</p>
           <div class="product-actions">
-            <button class="add-to-cart" data-name="Carrots" data-price="1.00">Add to Cart</button>
+            <button class="qty-btn" data-action="decrease" data-product-name="Carrots">-</button>
             <span class="in-cart-qty" data-product-name="Carrots">0</span>
+            <button class="qty-btn" data-action="increase" data-product-name="Carrots">+</button>
           </div>
         </div>
 
@@ -881,8 +970,9 @@
           <p class="product-quantity">per kg</p>
           <p class="product-price">$0.75</p>
           <div class="product-actions">
-            <button class="add-to-cart" data-name="Tomatoes" data-price="0.75">Add to Cart</button>
+            <button class="qty-btn" data-action="decrease" data-product-name="Tomatoes">-</button>
             <span class="in-cart-qty" data-product-name="Tomatoes">0</span>
+            <button class="qty-btn" data-action="increase" data-product-name="Tomatoes">+</button>
           </div>
         </div>
 
@@ -1004,22 +1094,40 @@
         cartEl.classList.toggle('translate-x-full');
       }
 
-      // Function to handle adding to cart from button data attributes
-      function handleAddToCart(event) {
-        const button = event.target;
-        const name = button.dataset.name;
-        const price = parseFloat(button.dataset.price);
-        let qty = 1;
-
+      // Function to handle adding/adjusting quantity
+      function adjustQuantity(name, change) {
         const existing = cart.find(item => item.name === name);
+
         if (existing) {
-          existing.qty += qty;
-        } else {
-          cart.push({ name, price, qty: qty });
+          existing.qty += change;
+          if (existing.qty <= 0) {
+            cart = cart.filter(item => item.name !== name); // Remove if quantity is 0 or less
+          }
+        } else if (change > 0) {
+          // If product doesn't exist and change is positive, add it with quantity 1
+          // This covers the initial "Add to Cart" scenario or clicking '+' when count is 0
+          // We need to fetch price from the product card's dataset for this.
+          const productCard = document.querySelector(`.product-card .qty-btn[data-product-name="${CSS.escape(name)}"]`).closest('.product-card');
+          const price = parseFloat(productCard.querySelector('.product-price').textContent.replace('US$', '').replace('$', ''));
+          cart.push({ name, price, qty: 1 });
         }
         renderCart();
-        updateProductQuantitiesDisplay(); // Update display for all products
+        updateProductQuantitiesDisplay();
       }
+
+      // Update event listener to handle quantity buttons
+      document.addEventListener('click', function(event) {
+        if (event.target.classList.contains('qty-btn')) {
+          const action = event.target.dataset.action;
+          const productName = event.target.dataset.productName;
+          if (action === 'increase') {
+            adjustQuantity(productName, 1);
+          } else if (action === 'decrease') {
+            adjustQuantity(productName, -1);
+          }
+        }
+      });
+
 
       // Function to update the quantity display for each product
       function updateProductQuantitiesDisplay() {
@@ -1027,23 +1135,17 @@
         inCartQtySpans.forEach(span => {
           const productName = span.dataset.productName;
           const itemInCart = cart.find(item => item.name === productName);
-          if (itemInCart) {
-            span.textContent = itemInCart.qty;
-            span.style.display = 'inline-block'; // Ensure it's visible if quantity > 0
-          } else {
-            span.textContent = '0'; // Reset to 0 if not in cart or removed
-            // Optionally hide if 0: span.style.display = 'none';
+          const quantity = itemInCart ? itemInCart.qty : 0;
+          span.textContent = quantity;
+
+          // Disable '-' button if quantity is 0
+          const decreaseButton = span.previousElementSibling; // The '-' button
+          if (decreaseButton && decreaseButton.dataset.action === 'decrease') {
+              decreaseButton.disabled = quantity === 0;
           }
         });
       }
 
-
-      // Add event listener to the document for delegation
-      document.addEventListener('click', function(event) {
-        if (event.target.classList.contains('add-to-cart')) {
-          handleAddToCart(event);
-        }
-      });
 
       function renderCart() {
         const cartItems = document.getElementById('cart-items');
